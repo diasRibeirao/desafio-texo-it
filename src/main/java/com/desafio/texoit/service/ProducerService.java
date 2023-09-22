@@ -34,7 +34,7 @@ public class ProducerService {
 
 	public ProducerMinMaxAwardsDTO findProducerMinMaxAwards() {
 		List<MovieProducer> list = movieProducerRepository.findByMovieWinner();
-		System.out.println(list);
+
 		ProducerMinMaxAwardsDTO obj = new ProducerMinMaxAwardsDTO();		
 		obj.getMin().addAll(findRangeAwards(list, true));
 		obj.getMax().addAll(findRangeAwards(list, false));
